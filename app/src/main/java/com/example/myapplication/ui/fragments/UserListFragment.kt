@@ -6,12 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
 import com.example.myapplication.data.model.ApiData
+import com.example.myapplication.data.paging.ApiPagingAdapter
+import com.example.myapplication.data.paging.PagingViewModel
 import com.example.myapplication.databinding.FragmentUserListBinding
 import com.example.myapplication.domain.network.Retrofit
 import com.example.myapplication.ui.adapters.MyItemRecyclerViewAdapter
@@ -31,6 +34,8 @@ class UserListFragment : Fragment() {
 
     private lateinit var binding: FragmentUserListBinding
     lateinit var userViewModel: UserViewModel;
+    lateinit var pagingViewModel: PagingViewModel;
+    lateinit var apiPagingAdapter: ApiPagingAdapter;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -49,38 +54,65 @@ class UserListFragment : Fragment() {
 
 
     private fun setViewProperties() {
-        initViewModel()
-        observeViewModel()
-        getData()
-
-        binding.button.setOnClickListener {
+        try {
+            initViewModel()
+            observeViewModel()
             getData()
+
+
+        } catch (e: Exception) {
+                   e.printStackTrace()
         }
     }
 
 
     private fun initViewModel() {
-        userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+        try {
+            userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+            pagingViewModel = ViewModelProvider(this) .get(PagingViewModel::class.java)
+        } catch (e: Exception) {
+                   e.printStackTrace()
+        }
     }
 
     private fun observeViewModel(){
-        userViewModel.observableApiData?.observe(this){
+     /*   userViewModel.observableApiData?.observe(viewLifecycleOwner){
 
-            if (it != null) {
-                binding.recyclerView.layoutManager = LinearLayoutManager(context)
-                binding.recyclerView.adapter = MyItemRecyclerViewAdapter(it)
+            try {
+                if (it != null) {
+                    binding.recyclerView.layoutManager = LinearLayoutManager(context)
+                    binding.recyclerView.adapter = MyItemRecyclerViewAdapter(it)
+                    binding.recyclerView.visibility=View.VISIBLE
+                }
+                else
+                {
+                    Toast.makeText(context,"Something went wrong please restart the app.",Toast.LENGTH_LONG)
+                        .show()
+                }
+                binding.progressCircular.visibility=View.GONE
+            } catch (e: Exception) {
+                       e.printStackTrace()
             }
-            else
-            {
-                Toast.makeText(context,"Something went wrong please restart the app.",Toast.LENGTH_LONG)
-                    .show()
-            }
-        }
+        }*/
+
+
+        pagingViewModel.list.observe(viewLifecycleOwner, Observer {
+            apiPagingAdapter.submitData(lifecycle,it)
+        })
     }
     private fun getData() {
 
-        CoroutineScope(Dispatchers.IO).launch {
-            Retrofit(userViewModel).getUsers(10, 0)
+        try {
+            binding.recyclerView.visibility=View.VISIBLE
+            binding.recyclerView.layoutManager = LinearLayoutManager(context)
+            binding.recyclerView.setHasFixedSize(true)
+            apiPagingAdapter=ApiPagingAdapter()
+            binding.recyclerView.adapter = apiPagingAdapter
+        /*    CoroutineScope(Dispatchers.IO).launch {
+                Retrofit(userViewModel).getUsers(10, 0)
+            }*/
+        } catch (e: Exception) {
+                   e.printStackTrace()
         }
 
     }

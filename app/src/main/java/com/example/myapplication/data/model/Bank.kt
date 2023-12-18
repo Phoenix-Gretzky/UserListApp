@@ -1,8 +1,11 @@
 package com.example.myapplication.data.model
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class Bank(
     @SerializedName("cardExpire")
     val cardExpire: String,
@@ -14,4 +17,4 @@ data class Bank(
     val currency: String,
     @SerializedName("iban")
     val iban: String
-)
+):Parcelable

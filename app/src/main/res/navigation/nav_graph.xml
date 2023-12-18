@@ -20,8 +20,9 @@
         android:label="fragment_blank"
         tools:layout="@layout/fragment_user_details" >
         <argument
-            android:name="position"
-            app:argType="integer"
-            android:defaultValue="1" />
+            android:name="user_data"
+            app:argType="com.example.myapplication.data.model.User"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
 </navigation>

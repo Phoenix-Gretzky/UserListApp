@@ -1,8 +1,12 @@
 package com.example.myapplication.data.model
 
 
+import android.os.Parcel
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class User(
     @SerializedName("address")
     val address: Address,
@@ -58,4 +62,4 @@ data class User(
     val username: String,
     @SerializedName("weight")
     val weight: Double
-)
+) :Parcelable

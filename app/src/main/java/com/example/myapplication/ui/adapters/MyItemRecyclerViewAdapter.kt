@@ -51,7 +51,7 @@ class MyItemRecyclerViewAdapter(
                 val navController = Navigation.findNavController(it)
                 navController.navigate(
                     UserListFragmentDirections.actionItemFragmentToBlankFragment(
-                        values.users[position].id
+                        values.users[position]
                     )
                 );
             }
