@@ -4,28 +4,36 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.example.myapplication.data.model.ApiData
 import com.example.myapplication.data.model.User
 
-class UserViewModel (application: Application): AndroidViewModel(application) {
+public class UserViewModel (): ViewModel() {
 
-    lateinit var mutableApiData:  MutableLiveData<ApiData>
-     var observableApiData:  LiveData<ApiData>
-    lateinit var mutableUserData:  MutableLiveData<User>
-     var observableUserData:  LiveData<User>
+     var mutableApiData:  MutableLiveData<ApiData?>?= MutableLiveData<ApiData?>()
+    var observableApiData:  LiveData<ApiData?>?
+    var mutableUserData:  MutableLiveData<User?>? =MutableLiveData<User?>()
+     var observableUserData:  LiveData<User?>?
 
-    init {
+     init {
         observableUserData=mutableUserData
         observableApiData=mutableApiData
     }
 
 
-    fun setApiData(apiData:  ApiData)
-    {
-        this.mutableApiData.value=apiData;
+    fun updateUserData(data: User?) {
+        mutableUserData?.postValue( data)
     }
-    fun setUserData(userData:  User)
-    {
-        this.mutableUserData.value=userData;
+
+
+    fun updateApiData(data: ApiData?) {
+        mutableApiData?.postValue(data)
     }
+
+    override fun onCleared() {
+        super.onCleared()
+        mutableApiData?.value =null
+        mutableUserData?.value =null
+    }
+
 }

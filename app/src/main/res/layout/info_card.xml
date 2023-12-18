@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardCornerRadius="30dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/subheading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="22dp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/key1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="key"
+                android:textColor="#737373"
+                android:textStyle="bold"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.48" />
+
+            <TextView
+                android:id="@+id/key2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="key"
+                android:textColor="#737373"
+                android:textStyle="bold"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/key1"
+                app:layout_constraintWidth_percent="0.48" />
+
+
+            <TextView
+                android:id="@+id/key3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="key"
+                android:textColor="#737373"
+                android:textStyle="bold"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/key2"
+                app:layout_constraintWidth_percent="0.48" />
+
+            <TextView
+                android:id="@+id/key4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="key"
+                android:textColor="#737373"
+                android:textStyle="bold"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/key3"
+                app:layout_constraintWidth_percent="0.48" />
+
+            <TextView
+                android:id="@+id/key5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="key"
+                android:textColor="#737373"
+                android:textStyle="bold"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/key4"
+                app:layout_constraintWidth_percent="0.48" />
+
+
+            <TextView
+                android:id="@+id/key6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="key"
+                android:textColor="#737373"
+                android:textStyle="bold"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/key5"
+                app:layout_constraintWidth_percent="0.48" />
+
+            <!-- Repeat for key4 through key10 -->
+            <TextView
+                android:id="@+id/key7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="key"
+                android:textColor="#737373"
+                android:textStyle="bold"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/key6"
+                app:layout_constraintWidth_percent="0.48" />
+
+            <TextView
+                android:id="@+id/key8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="key"
+                android:textColor="#737373"
+                android:textStyle="bold"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/key7"
+                app:layout_constraintWidth_percent="0.48" />
+
+
+            <TextView
+                android:id="@+id/key9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="key"
+                android:textColor="#737373"
+                android:textStyle="bold"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/key8"
+                app:layout_constraintWidth_percent="0.48" />
+
+            <TextView
+                android:id="@+id/key9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="key"
+                android:textColor="#737373"
+                android:textStyle="bold"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/key8"
+                app:layout_constraintWidth_percent="0.48" />
+
+            <TextView
+                android:id="@+id/key10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="key"
+                android:textColor="#737373"
+                android:textStyle="bold"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/key9"
+                app:layout_constraintWidth_percent="0.48" />
+
+            <TextView
+                android:id="@+id/key11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="key"
+                android:textColor="#737373"
+                android:textStyle="bold"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/key10"
+                app:layout_constraintWidth_percent="0.48" />
+
+            <TextView
+                android:id="@+id/key12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="key"
+                android:textColor="#737373"
+                android:textStyle="bold"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/key11"
+                app:layout_constraintWidth_percent="0.48" />
+
+            <TextView
+                android:id="@+id/key13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="key"
+                android:textColor="#737373"
+                android:textStyle="bold"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/key12"
+                app:layout_constraintWidth_percent="0.48" />
+
+            <TextView
+                android:id="@+id/key14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="key"
+                android:textColor="#737373"
+                android:textStyle="bold"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/key13"
+                app:layout_constraintWidth_percent="0.48" />
+
+
+            <TextView
+                android:id="@+id/key15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="key"
+                android:textColor="#737373"
+                android:textStyle="bold"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/key14"
+                app:layout_constraintWidth_percent="0.48" />
+
+
+            <!--            values start-->
+
+
+            <!-- 1 -->
+            <TextView
+                android:id="@+id/value1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="value"
+                android:textColor="#737373"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/key1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/key1"
+                app:layout_constraintTop_toTopOf="@id/key1" />
+
+            <!-- 2 -->
+            <TextView
+                android:id="@+id/value2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="value"
+                android:textColor="#737373"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/key2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/key2"
+                app:layout_constraintTop_toTopOf="@id/key2" />
+
+            <!-- 3 -->
+            <TextView
+                android:id="@+id/value3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="value"
+                android:textColor="#737373"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/key3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/key3"
+                app:layout_constraintTop_toTopOf="@id/key3" />
+
+            <!-- 4 -->
+            <TextView
+                android:id="@+id/value4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="value"
+                android:textColor="#737373"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/key4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/key4"
+                app:layout_constraintTop_toTopOf="@id/key4" />
+
+            <!-- 5 -->
+            <TextView
+                android:id="@+id/value5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="value"
+                android:textColor="#737373"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/key5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/key5"
+                app:layout_constraintTop_toTopOf="@id/key5" />
+
+            <!-- 6 -->
+            <TextView
+                android:id="@+id/value6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="value"
+                android:textColor="#737373"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/key6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/key6"
+                app:layout_constraintTop_toTopOf="@id/key6" />
+
+            <!-- 7 -->
+            <TextView
+                android:id="@+id/value7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="value"
+                android:textColor="#737373"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/key7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/key7"
+                app:layout_constraintTop_toTopOf="@id/key7" />
+
+            <!-- 8 -->
+            <TextView
+                android:id="@+id/value8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="value"
+                android:textColor="#737373"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/key8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/key8"
+                app:layout_constraintTop_toTopOf="@id/key8" />
+
+            <!-- 9 -->
+            <TextView
+                android:id="@+id/value9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="value"
+                android:textColor="#737373"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/key9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/key9"
+                app:layout_constraintTop_toTopOf="@id/key9" />
+
+            <!-- 10 -->
+            <TextView
+                android:id="@+id/value10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="value"
+                android:textColor="#737373"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/key10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/key10"
+                app:layout_constraintTop_toTopOf="@id/key10" />
+
+
+            <!-- 11 -->
+            <TextView
+                android:id="@+id/value11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="value"
+                android:textColor="#737373"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/key11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/key11"
+                app:layout_constraintTop_toTopOf="@id/key11" />
+
+            <TextView
+                android:id="@+id/value12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="value"
+                android:textColor="#737373"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/key12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/key12"
+                app:layout_constraintTop_toTopOf="@id/key12" />
+
+            <TextView
+                android:id="@+id/value13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="value"
+                android:textColor="#737373"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/key13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/key13"
+                app:layout_constraintTop_toTopOf="@id/key13" />
+
+            <TextView
+                android:id="@+id/value14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="value"
+                android:textColor="#737373"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/key14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/key14"
+                app:layout_constraintTop_toTopOf="@id/key14" />
+
+
+            <TextView
+                android:id="@+id/value15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="value"
+                android:textColor="#737373"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/key15"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/key15"
+                app:layout_constraintTop_toTopOf="@id/key15" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

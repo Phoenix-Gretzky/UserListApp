@@ -9,8 +9,8 @@ import retrofit2.http.Query
 
 public interface UserService {
 
-    @GET("/users")
+    @GET("users")
      suspend fun getUsers(@Query ("limit") limit:Int,@Query("skip") skip:Int ) :Response<ApiData>
-    @GET("/users/{id}")
+    @GET("{id}")
      suspend fun getUsers(@Path ("id") id:Int):Response<User>
 }
